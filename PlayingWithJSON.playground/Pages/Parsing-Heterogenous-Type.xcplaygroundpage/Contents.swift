@@ -1,5 +1,16 @@
 import Foundation
 
+//https://www.youtube.com/watch?v=CbZ9ILy22eE
+
+// Parsing Heterogeneous (mixed types) Type
+// ex: 'postcode' on occasion is an Int or a String
+// this will lead to decoding errors while parsing
+
+
+//      =====================================================================
+//                  JSON - Heterogenous Type - data
+//      =====================================================================
+
 let json = """
 {
     "results": [{
@@ -119,3 +130,49 @@ let json = """
 
 """.data(using: .utf8)!
 
+
+//      ===========================================================
+//                     Swift Model(s)
+//      ===========================================================
+
+// reminder: the top level of JSON data structure is a dictionary
+struct ResultsWrapper: Codable {
+    let results: [Person]
+    
+}
+
+struct Person: Codable {
+    let gender: String
+    let name: FullName
+    let location: Location
+    let email: String
+}
+
+struct FullName: Codable {
+    let title: String
+    let first: String
+    let last: String
+}
+
+struct Location: Codable {
+    let city: String
+    let country: String
+    let postcode: Int
+}
+
+//struct Postcode: Codable {
+//
+//}
+
+//      =====================================================================
+//                decode JSON to Swift objects
+//      =====================================================================
+
+do {
+    let dictionary = try JSONDecoder().decode(ResultsWrapper.self, from: json)
+    let people = dictionary.results
+    dump(people)
+    
+} catch {
+    dump(error)
+}
