@@ -3,7 +3,7 @@ import Foundation
 
 // https://www.youtube.com/watch?v=Z6t_4_1xqnI
 //      =====================================================================
-//                  JSON - Heterogenous Type - data
+//                  JSON - Multiple Keys Dictionary Type - data
 //      =====================================================================
 
 let json = """
