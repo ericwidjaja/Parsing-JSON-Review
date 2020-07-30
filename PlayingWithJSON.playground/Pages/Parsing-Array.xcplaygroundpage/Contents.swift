@@ -13,6 +13,13 @@ let json = """
         "woeid": 2459115,
         "latt_long": "40.71455,-74.007118"
     },
+    
+    {
+        "title": "Frankfurt",
+        "location_type": "City",
+        "woeid": 650271,
+        "latt_long": "50.1109, 8.6821"
+    },
 
     {
         "title": "Long Island City",

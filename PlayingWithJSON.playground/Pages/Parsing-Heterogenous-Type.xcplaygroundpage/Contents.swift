@@ -1,121 +1,166 @@
 
 import Foundation
+
+// https://www.youtube.com/watch?v=Z6t_4_1xqnI
+//      =====================================================================
+//                  JSON - Heterogenous Type - data
+//      =====================================================================
+
 let json = """
+
 {
-    "results": [{
-            "gender": "female",
-            "name": {
-                "title": "Mrs",
-                "first": "April",
-                "last": "Watts"
-            },
-            "location": {
-                "street": {
-                    "number": 6533,
-                    "name": "E North St"
-                },
-                "city": "Kansas City",
-                "state": "Oklahoma",
-                "country": "United States",
-                "postcode": 83696,
-                "coordinates": {
-                    "latitude": "80.0183",
-                    "longitude": "82.3050"
-                },
-                "timezone": {
-                    "offset": "-8:00",
-                    "description": "Pacific Time (US & Canada)"
-                }
-            },
-            "email": "april.watts@example.com",
-            "login": {
-                "uuid": "1f72a37b-dad7-42c0-8f38-c61c8cc16fb3",
-                "username": "orangerabbit451",
-                "password": "colt",
-                "salt": "P1EkWcX0",
-                "md5": "5fd24b5b5533c30092525a7b625aeaa8",
-                "sha1": "834dff83eea9a0243edfa9ce3cbaf4da2806630e",
-                "sha256": "b81912ada362314edb0681234bc29792a872025a89b4f1bf7d83f63203feaeb7"
-            },
-            "dob": {
-                "date": "1948-10-23T16:57:10.463Z",
-                "age": 72
-            },
-            "registered": {
-                "date": "2015-07-27T15:43:32.525Z",
-                "age": 5
-            },
-            "phone": "(880)-397-2424",
-            "cell": "(681)-007-8567",
-            "id": {
-                "name": "SSN",
-                "value": "901-71-3377"
-            },
-            "picture": {
-                "large": "https://randomuser.me/api/portraits/women/51.jpg",
-                "medium": "https://randomuser.me/api/portraits/med/women/51.jpg",
-                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/51.jpg"
-            },
-            "nat": "US"
-        },
-        {
-            "gender": "female",
-            "name": {
-                "title": "Ms",
-                "first": "Sofia",
-                "last": "Gill"
-            },
-            "location": {
-                "street": {
-                    "number": 7310,
-                    "name": "Frederick Ave"
-                },
-                "city": "Georgetown",
-                "state": "Nova Scotia",
-                "country": "Canada",
-                "postcode": "Y5N 0E9",
-                "coordinates": {
-                    "latitude": "-0.1529",
-                    "longitude": "-79.4845"
-                },
-                "timezone": {
-                    "offset": "-1:00",
-                    "description": "Azores, Cape Verde Islands"
-                }
-            },
-            "email": "sofia.gill@example.com",
-            "login": {
-                "uuid": "6ad311bd-8acf-401c-a66c-b28e5e6b7570",
-                "username": "bluedog205",
-                "password": "boating",
-                "salt": "XtuMADSl",
-                "md5": "142db797c2bc687900db98629f78a435",
-                "sha1": "d71acef64a75c5cb72c4439cbdd313f4f1a3593b",
-                "sha256": "1ac31d458590319d68de43a7fd8f5e0b4d91f18f48182e6b3feab263bf96ea98"
-            },
-            "dob": {
-                "date": "1978-06-12T22:45:12.529Z",
-                "age": 42
-            },
-            "registered": {
-                "date": "2009-10-16T05:54:27.726Z",
-                "age": 11
-            },
-            "phone": "818-113-5421",
-            "cell": "824-320-7893",
-            "id": {
-                "name": "",
-                "value": null
-            },
-            "picture": {
-                "large": "https://randomuser.me/api/portraits/women/92.jpg",
-                "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
-                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg"
-            },
-            "nat": "CA"
+    "Afpak": {
+        "id": 1,
+        "race": "hybrid",
+        "flavors": [
+            "Earthy",
+            "Chemical",
+            "Pine"
+        ],
+        "effects": {
+            "positive": [
+                "Relaxed",
+                "Hungry",
+                "Happy",
+                "Sleepy"
+            ],
+            "negative": [
+                "Dizzy"
+            ],
+            "medical": [
+                "Depression",
+                "Insomnia",
+                "Pain",
+                "Stress",
+                "Lack of Appetite"
+            ]
         }
-    ]
+    },
+    "African": {
+        "id": 2,
+        "race": "sativa",
+        "flavors": [
+            "Spicy/Herbal",
+            "Pungent",
+            "Earthy"
+        ],
+        "effects": {
+            "positive": [
+                "Euphoric",
+                "Happy",
+                "Creative",
+                "Energetic",
+                "Talkative"
+            ],
+            "negative": [
+                "Dry Mouth"
+            ],
+            "medical": [
+                "Depression",
+                "Pain",
+                "Stress",
+                "Lack of Appetite",
+                "Nausea",
+                "Headache"
+            ]
+        }
+    },
+    "Afternoon Delight": {
+        "id": 3,
+        "race": "hybrid",
+        "flavors": [
+            "Pepper",
+            "Flowery",
+            "Pine"
+        ],
+        "effects": {
+            "positive": [
+                "Relaxed",
+                "Hungry",
+                "Euphoric",
+                "Uplifted",
+                "Tingly"
+            ],
+            "negative": [
+                "Dizzy",
+                "Dry Mouth",
+                "Paranoid"
+            ],
+            "medical": [
+                "Depression",
+                "Insomnia",
+                "Pain",
+                "Stress",
+                "Cramps",
+                "Headache"
+            ]
+        }
+    }
 }
 
 """.data(using: .utf8)!
 
+//      =====================================================================
+//                  Swift Model(s)
+//      =====================================================================
+struct Strain: Codable {
+    let id: Int
+    let race: String
+    let flavors: [String]
+    let effects: [String: [String]]
+}
+
+//      =====================================================================
+//                decode JSON to Swift objects
+//      =====================================================================
+
+
+/* To decode Dict where 'keys' are: "Afpak",
+                                    "African",
+                                    "Afternoon Delight",...
+ 
+            and values are wrapped in a 'Strain' array of Strings:
+                                    {
+                                    "id": 1,
+                                    "race": "hybrid",
+                                    "flavors": [
+                                        "Earthy",
+                                        "Chemical",
+                                        "Pine"
+                                    ],
+                                    "effects": {
+                                        "positive": [
+                                            "Relaxed",
+                                            "Hungry",
+                                            "Happy",
+                                            "Sleepy"
+                                        ],
+                                        "negative": [
+                                            "Dizzy"
+                                        ],
+                                        "medical": [
+                                            "Depression",
+                                            "Insomnia",
+                                            "Pain",
+                                            "Stress",
+                                            "Lack of Appetite"
+                                        ]
+                                    }
+ */
+do {
+    let dictionary = try JSONDecoder().decode([String: Strain].self, from: json)
+    
+    // use a for-loop to create [Strain] or use map {}
+    var strains = [Strain]()
+    for (_, value) in dictionary {
+        let strain = Strain(id: value.id,
+                            race: value.race,
+                            flavors: value.flavors,
+                            effects: value.effects)
+        strains.append(strain)
+    }
+    dump(strains) // or we usually put completionHandler here
+    
+} catch {
+    print(error)
+}
