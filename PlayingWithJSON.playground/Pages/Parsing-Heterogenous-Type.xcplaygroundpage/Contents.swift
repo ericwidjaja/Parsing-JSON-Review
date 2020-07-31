@@ -136,12 +136,12 @@ let json = """
 //      ===========================================================
 
 // reminder: the top level of JSON data structure is a dictionary
-struct ResultsWrapper: Codable {
+
+struct ResultsWrapper: Decodable {
     let results: [Person]
-    
 }
 
-struct Person: Codable {
+struct Person: Decodable {
     let gender: String
     let name: FullName
     let location: Location
@@ -154,15 +154,44 @@ struct FullName: Codable {
     let last: String
 }
 
-struct Location: Codable {
+struct Location: Decodable {
     let city: String
     let country: String
-    let postcode: Int
+    let postcode: Postcode
+//    let postcode: Int //in this JSON, 'postcode' can be Int or String so we need to create
+    // a custom object (enum) to match the data type of 'postcode'
+}
+// the enum will handle the two cases in the JSON 'postcode' property,
+// where postcode can be either an (Int) or a (String)
+enum Postcode: Decodable {
+    case int(Int)               // we will also use associative values to capture the
+    case string(String)         // value of postcode
+    // e.g if it's an Int we will capture the Int value
+    
+    // override the init(from decoder:) initializer
+
+    init(from decoder: Decoder) throws {
+        // handle the two cases of Int or String
+        
+        // if it's not an Int or a String then we will throw
+        // an error
+        
+        if let intValue = try? decoder.singleValueContainer().decode(Int.self) {
+            self = .int(intValue)
+            return
+        }
+        if let stringValue = try? decoder.singleValueContainer().decode(String.self) {
+            self = .string(stringValue)
+            return
+        }
+        throw AppError.missingValue // was not an Int or String
+    }
 }
 
-//struct Postcode: Codable {
-//
-//}
+enum AppError: Error {
+  case missingValue // if not an Int or String throw this error
+}
+
 
 //      =====================================================================
 //                decode JSON to Swift objects
@@ -171,7 +200,19 @@ struct Location: Codable {
 do {
     let dictionary = try JSONDecoder().decode(ResultsWrapper.self, from: json)
     let people = dictionary.results
-    dump(people)
+    
+    // if trying to get to a Postcode:
+    let _ = people[0]
+    let secondPerson = people[1]
+    let postcode = secondPerson.location.postcode
+    switch postcode {
+    case .int(let intValue):
+        print("postcode in numerical is \(intValue)")
+    case .string(let stringValue):
+        print("postcode is letters is \(stringValue)")
+    }
+    
+//    dump(people)
     
 } catch {
     dump(error)
