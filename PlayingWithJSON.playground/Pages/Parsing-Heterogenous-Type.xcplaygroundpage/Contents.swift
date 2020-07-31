@@ -145,7 +145,6 @@ struct Person: Decodable {
     let gender: String
     let name: FullName
     let location: Location
-    let email: String
 }
 
 struct FullName: Codable {
@@ -207,12 +206,12 @@ do {
     let postcode = secondPerson.location.postcode
     switch postcode {
     case .int(let intValue):
-        print("postcode in numerical is \(intValue)")
+        print("postcode in 'Int' format is \(intValue)")
     case .string(let stringValue):
-        print("postcode is letters is \(stringValue)")
+        print("postcode in 'String' format is \(stringValue)")
     }
     
-//    dump(people)
+    dump(people)
     
 } catch {
     dump(error)
