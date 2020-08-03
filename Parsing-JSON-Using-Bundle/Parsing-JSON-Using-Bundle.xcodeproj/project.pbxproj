@@ -15,7 +15,18 @@
 		DF2DFC2B24D85387009247F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2DFC2924D85387009247F3 /* LaunchScreen.storyboard */; };
 		DF2DFC3324D853F9009247F3 /* presidents.json in Resources */ = {isa = PBXBuildFile; fileRef = DF2DFC3224D853F9009247F3 /* presidents.json */; };
 		DF2DFC3524D883BE009247F3 /* Presidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC3424D883BE009247F3 /* Presidents.swift */; };
+		DF2DFC3D24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC3C24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF2DFC3F24D88736009247F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF2DFC1324D8537E009247F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF2DFC1A24D8537E009247F3;
+			remoteInfo = "Parsing-JSON-Using-Bundle";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DF2DFC1B24D8537E009247F3 /* Parsing-JSON-Using-Bundle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parsing-JSON-Using-Bundle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +39,20 @@
 		DF2DFC2C24D85387009247F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2DFC3224D853F9009247F3 /* presidents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = presidents.json; sourceTree = "<group>"; };
 		DF2DFC3424D883BE009247F3 /* Presidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presidents.swift; sourceTree = "<group>"; };
+		DF2DFC3A24D88736009247F3 /* Parsing-JSON-Using-BundleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parsing-JSON-Using-BundleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2DFC3C24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing_JSON_Using_BundleTests.swift; sourceTree = "<group>"; };
+		DF2DFC3E24D88736009247F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DF2DFC1824D8537E009247F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2DFC3724D88736009247F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2DFC1D24D8537E009247F3 /* Parsing-JSON-Using-Bundle */,
+				DF2DFC3B24D88736009247F3 /* Parsing-JSON-Using-BundleTests */,
 				DF2DFC1C24D8537E009247F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2DFC1B24D8537E009247F3 /* Parsing-JSON-Using-Bundle.app */,
+				DF2DFC3A24D88736009247F3 /* Parsing-JSON-Using-BundleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +94,15 @@
 				DF2DFC2C24D85387009247F3 /* Info.plist */,
 			);
 			path = "Parsing-JSON-Using-Bundle";
+			sourceTree = "<group>";
+		};
+		DF2DFC3B24D88736009247F3 /* Parsing-JSON-Using-BundleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF2DFC3C24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift */,
+				DF2DFC3E24D88736009247F3 /* Info.plist */,
+			);
+			path = "Parsing-JSON-Using-BundleTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +125,24 @@
 			productReference = DF2DFC1B24D8537E009247F3 /* Parsing-JSON-Using-Bundle.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DF2DFC3924D88736009247F3 /* Parsing-JSON-Using-BundleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2DFC4124D88736009247F3 /* Build configuration list for PBXNativeTarget "Parsing-JSON-Using-BundleTests" */;
+			buildPhases = (
+				DF2DFC3624D88736009247F3 /* Sources */,
+				DF2DFC3724D88736009247F3 /* Frameworks */,
+				DF2DFC3824D88736009247F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF2DFC4024D88736009247F3 /* PBXTargetDependency */,
+			);
+			name = "Parsing-JSON-Using-BundleTests";
+			productName = "Parsing-JSON-Using-BundleTests";
+			productReference = DF2DFC3A24D88736009247F3 /* Parsing-JSON-Using-BundleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +155,10 @@
 				TargetAttributes = {
 					DF2DFC1A24D8537E009247F3 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					DF2DFC3924D88736009247F3 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = DF2DFC1A24D8537E009247F3;
 					};
 				};
 			};
@@ -122,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				DF2DFC1A24D8537E009247F3 /* Parsing-JSON-Using-Bundle */,
+				DF2DFC3924D88736009247F3 /* Parsing-JSON-Using-BundleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +190,13 @@
 				DF2DFC2B24D85387009247F3 /* LaunchScreen.storyboard in Resources */,
 				DF2DFC2824D85387009247F3 /* Assets.xcassets in Resources */,
 				DF2DFC2624D8537E009247F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2DFC3824D88736009247F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +214,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF2DFC3624D88736009247F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2DFC3D24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF2DFC4024D88736009247F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF2DFC1A24D8537E009247F3 /* Parsing-JSON-Using-Bundle */;
+			targetProxy = DF2DFC3F24D88736009247F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DF2DFC2424D8537E009247F3 /* Main.storyboard */ = {
@@ -324,6 +402,46 @@
 			};
 			name = Release;
 		};
+		DF2DFC4224D88736009247F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAZ4GBUSA;
+				INFOPLIST_FILE = "Parsing-JSON-Using-BundleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericW.Parsing-JSON-Using-BundleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parsing-JSON-Using-Bundle.app/Parsing-JSON-Using-Bundle";
+			};
+			name = Debug;
+		};
+		DF2DFC4324D88736009247F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAZ4GBUSA;
+				INFOPLIST_FILE = "Parsing-JSON-Using-BundleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericW.Parsing-JSON-Using-BundleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Parsing-JSON-Using-Bundle.app/Parsing-JSON-Using-Bundle";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +459,15 @@
 			buildConfigurations = (
 				DF2DFC3024D85387009247F3 /* Debug */,
 				DF2DFC3124D85387009247F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2DFC4124D88736009247F3 /* Build configuration list for PBXNativeTarget "Parsing-JSON-Using-BundleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2DFC4224D88736009247F3 /* Debug */,
+				DF2DFC4324D88736009247F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
