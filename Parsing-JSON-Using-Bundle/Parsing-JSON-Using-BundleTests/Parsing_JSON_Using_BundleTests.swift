@@ -57,5 +57,22 @@ class Parsing_JSON_Using_BundleTests: XCTestCase {
             XCTFail("decoding error: \(error)")
         }
     }
-  
+    
+    func testParseJSONFromBundle() {
+        // arrange
+        let filename = "presidents" //reminder: this file name MUST the same with the project's 'Filename.json' (presidents.json)
+        
+        let firstBlackPresident = "Barack Obama"
+        
+        // act
+        do {
+            let presidents = try Bundle.main.parseJSON(with: filename)
+        
+        // assert
+            XCTAssertEqual(firstBlackPresident, presidents[44].name)
+            
+        } catch {
+            XCTFail("decoding error: \(error)")
+        }
+    }
 }
