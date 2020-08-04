@@ -14,9 +14,13 @@ class ViewController: UIViewController {
         case main // table view has only one section
     }
 
+    
     @IBOutlet weak var presidentsTableView: UITableView!
     
-    private var dataSource: 
+    //both the SectionItemIdentifier and the ItemIdentifier need to conform to the Hasable Protocol
+    
+    typealias DataSource = UITableViewDiffableDataSource<Section, President> //to make it conform to Hashable, add 'Hashable' after 'Decodable' in the President.Swift Model
+    private var dataSource: DataSource!
     
     
     override func viewDidLoad() {

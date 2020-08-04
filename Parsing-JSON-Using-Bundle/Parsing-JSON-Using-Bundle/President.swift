@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct President: Decodable {
+struct President: Decodable, Hashable {
     let number: Int
     let name: String // originally called "president", we will
     let birthYear: Int // use coding keys, the similar with birthYear from birth_year...
