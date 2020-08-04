@@ -69,7 +69,8 @@ class Parsing_JSON_Using_BundleTests: XCTestCase {
             let presidents = try Bundle.main.parseJSON(with: filename)
         
         // assert
-            XCTAssertEqual(firstBlackPresident, presidents[44].name)
+            XCTAssertEqual(firstBlackPresident, presidents[43].name)
+            // reminder => arrays' indices starts at 0, so Obama is the 44, but in the arrays his index is at 43
             
         } catch {
             XCTFail("decoding error: \(error)")
