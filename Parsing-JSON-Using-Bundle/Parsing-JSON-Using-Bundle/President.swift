@@ -8,10 +8,10 @@ import Foundation
 struct President: Decodable, Hashable {
     let number: Int
     let name: String // originally called "president", we will
-    let birthYear: Int // use coding keys, the similar with
-    let deathYear: Int? // birthYear from birth_year...
+    let birthYear: Int // use coding keys, the similar with birthYear from birth_year...
+    let deathYear: Int? // Marked as optional value, because there are some presidents that still alive
     let tookOffice: String
-    let leftOffice: String?
+    let leftOffice: String? // Marked as optional value, because current president is still in the office
     let party: String
     
     private enum CodingKeys: String, CodingKey {
