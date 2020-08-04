@@ -14,8 +14,9 @@
 		DF2DFC2824D85387009247F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2DFC2724D85387009247F3 /* Assets.xcassets */; };
 		DF2DFC2B24D85387009247F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2DFC2924D85387009247F3 /* LaunchScreen.storyboard */; };
 		DF2DFC3324D853F9009247F3 /* presidents.json in Resources */ = {isa = PBXBuildFile; fileRef = DF2DFC3224D853F9009247F3 /* presidents.json */; };
-		DF2DFC3524D883BE009247F3 /* Presidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC3424D883BE009247F3 /* Presidents.swift */; };
+		DF2DFC3524D883BE009247F3 /* President.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC3424D883BE009247F3 /* President.swift */; };
 		DF2DFC3D24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC3C24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift */; };
+		DF2DFC4524D8B05E009247F3 /* Bundle+ParsingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DFC4424D8B05E009247F3 /* Bundle+ParsingJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +39,11 @@
 		DF2DFC2A24D85387009247F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF2DFC2C24D85387009247F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2DFC3224D853F9009247F3 /* presidents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = presidents.json; sourceTree = "<group>"; };
-		DF2DFC3424D883BE009247F3 /* Presidents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presidents.swift; sourceTree = "<group>"; };
+		DF2DFC3424D883BE009247F3 /* President.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = President.swift; sourceTree = "<group>"; };
 		DF2DFC3A24D88736009247F3 /* Parsing-JSON-Using-BundleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parsing-JSON-Using-BundleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2DFC3C24D88736009247F3 /* Parsing_JSON_Using_BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing_JSON_Using_BundleTests.swift; sourceTree = "<group>"; };
 		DF2DFC3E24D88736009247F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2DFC4424D8B05E009247F3 /* Bundle+ParsingJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+ParsingJSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 				DF2DFC2224D8537E009247F3 /* ViewController.swift */,
 				DF2DFC2424D8537E009247F3 /* Main.storyboard */,
 				DF2DFC3224D853F9009247F3 /* presidents.json */,
-				DF2DFC3424D883BE009247F3 /* Presidents.swift */,
+				DF2DFC3424D883BE009247F3 /* President.swift */,
+				DF2DFC4424D8B05E009247F3 /* Bundle+ParsingJSON.swift */,
 				DF2DFC2724D85387009247F3 /* Assets.xcassets */,
 				DF2DFC2924D85387009247F3 /* LaunchScreen.storyboard */,
 				DF2DFC2C24D85387009247F3 /* Info.plist */,
@@ -207,7 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF2DFC3524D883BE009247F3 /* Presidents.swift in Sources */,
+				DF2DFC4524D8B05E009247F3 /* Bundle+ParsingJSON.swift in Sources */,
+				DF2DFC3524D883BE009247F3 /* President.swift in Sources */,
 				DF2DFC2324D8537E009247F3 /* ViewController.swift in Sources */,
 				DF2DFC1F24D8537E009247F3 /* AppDelegate.swift in Sources */,
 				DF2DFC2124D8537E009247F3 /* SceneDelegate.swift in Sources */,

@@ -48,7 +48,7 @@ class Parsing_JSON_Using_BundleTests: XCTestCase {
         
         //2. Act: we are act on it by writing the 'do...let...catch"
         do {
-            let presidents = try JSONDecoder().decode([Presidents].self, from: jsonData)
+            let presidents = try JSONDecoder().decode([President].self, from: jsonData)
         //3. Assert:
 //            XCTAssertEqual(expectedFirstPresidentName, presidents[1].name) // we are making the test fail first -> "George Washington" != "John Adams"
             XCTAssertEqual(expectedFirstPresidentName, presidents[0].name) //now the test result is correct -> "George Washington" == "George Washington"
