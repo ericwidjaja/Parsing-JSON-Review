@@ -49,5 +49,4 @@ extension Bundle {
         
         return presidents
     }
-    
 }
